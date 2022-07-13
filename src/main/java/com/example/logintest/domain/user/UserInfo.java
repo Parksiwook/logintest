@@ -40,8 +40,7 @@ public class UserInfo implements UserDetails {
 
     // 필수 override 메소드들 구현
 
-    // 사용자의 권한이 ,로 구분되어 있는 auth을 받음, 콜렉션 형태로 반환시킴
-    // 단, 자료형은 GrantedAuthority를 구현해야 함함
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Set<GrantedAuthority> roles = new HashSet<>();

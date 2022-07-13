@@ -12,14 +12,14 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @RequiredArgsConstructor
 @EnableWebSecurity // Spring Security를 활성화하는 어노테이션
-@Configuration // Bean 관리하는 어노테이션인듯 함, Spring에 대한 공부 더 필요함
+@Configuration // Bean 관리
 // 해당 클래스가 Spring Security 설정 파일로 역할을 하기 위해선 WebSecurityConfigurerAdapter 클래스를 상속해야 함
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserService userService; // 유저 정보를 가져올 클래스
 
     @Override
-    // 인증을 무시할 경로 설정, h2-console 추가 (근데 h2-console에 갑자기 로그인 요구, 수정 필요할듯)
+    // 인증을 무시할 경로 설정, h2-console 추가
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "h2-console/**");
     }

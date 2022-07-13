@@ -1,7 +1,7 @@
 package com.example.logintest.web;
 
 import com.example.logintest.service.UserService;
-import com.example.logintest.web.dto.UserinfoDto;
+import com.example.logintest.web.dto.UserInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -19,7 +19,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/user") // signup api
-    public String signup(UserinfoDto infoDto) {
+    public String signup(UserInfoDto infoDto) {
         userService.save(infoDto);
         return "redirect:/login";
     }
