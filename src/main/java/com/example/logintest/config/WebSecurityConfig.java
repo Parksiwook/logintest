@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserService userService; // 유저 정보를 가져올 클래스
 
     @Override
-    // 인증을 무시할 경로 설정, h2-console 추가 (근데 h2-console에 갑자기 로그인 요구, 수정 필요할듯)
+    // 인증을 무시할 경로 설정
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "h2-console/**");
     }
