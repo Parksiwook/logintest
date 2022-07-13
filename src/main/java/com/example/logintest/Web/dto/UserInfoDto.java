@@ -11,3 +11,5 @@ public class UserInfoDto {
     private String password;
     private String auth;
 }
+
+// 소스트리 추가?
