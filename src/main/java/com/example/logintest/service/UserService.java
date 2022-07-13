@@ -1,9 +1,8 @@
-package com.example.logintest.serviec;
-
+package com.example.logintest.service;
 
 import com.example.logintest.domain.user.UserInfo;
 import com.example.logintest.domain.user.UserRepository;
-import com.example.logintest.web.dto.UserInfoDto;
+import com.example.logintest.Web.dto.UserInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
