@@ -1,8 +1,5 @@
 package com.example.logintest.domain.user;
 
-<<<<<<< HEAD
-public interface UserRepository {
-=======
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -13,5 +10,4 @@ public interface UserRepository extends JpaRepository<UserInfo, Long> {
 
     List<UserInfo> findUserInfoByEmail(String Email);
 
->>>>>>> a637cb09c61e4237b9c9440155de2991186a7d9d
 }

@@ -1,9 +1,5 @@
 package com.example.logintest.config;
 
-<<<<<<< HEAD
-public class MvcConfig {
-}
-=======
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -18,4 +14,3 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/admin").setViewName("admin");
     }
 }
->>>>>>> a637cb09c61e4237b9c9440155de2991186a7d9d

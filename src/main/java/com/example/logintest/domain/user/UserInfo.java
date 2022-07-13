@@ -1,8 +1,4 @@
 package com.example.logintest.domain.user;
-
-<<<<<<< HEAD
-public class UserInfo {
-=======
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -90,5 +86,4 @@ public class UserInfo implements UserDetails {
         return true; // 활성화 됨
     }
 
->>>>>>> a637cb09c61e4237b9c9440155de2991186a7d9d
 }

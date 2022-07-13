@@ -1,8 +1,6 @@
 package com.example.logintest.config;
 
-<<<<<<< HEAD
-public class WebSecurityConfig {
-=======
+
 import com.example.logintest.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
@@ -55,5 +53,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.userDetailsService(userService) // 유저 정보는 userService 에서 가져온다
                 .passwordEncoder(new BCryptPasswordEncoder()); // 패스워드 인코더는 passwordEncoder(BCrypt 사용)
     }
->>>>>>> a637cb09c61e4237b9c9440155de2991186a7d9d
+
 }
