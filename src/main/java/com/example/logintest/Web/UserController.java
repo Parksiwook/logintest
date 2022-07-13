@@ -1,7 +1,7 @@
 package com.example.logintest.Web;
 
-import com.example.logintest.Web.dto.UserinfoDto;
 import com.example.logintest.service.UserService;
+import com.example.logintest.Web.dto.UserinfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -14,7 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 
 @RequiredArgsConstructor
 @Controller
-
 public class UserController {
 
     private final UserService userService;
