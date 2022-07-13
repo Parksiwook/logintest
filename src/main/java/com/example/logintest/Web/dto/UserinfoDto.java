@@ -1,4 +1,4 @@
-package com.example.logintest.web.dto;
+package com.example.logintest.Web.dto;
 
 import lombok.Getter;
 import lombok.Setter;
