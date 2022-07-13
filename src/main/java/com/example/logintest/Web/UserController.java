@@ -1,7 +1,7 @@
-package com.example.logintest.web;
+package com.example.logintest.Web;
 
 import com.example.logintest.service.UserService;
-import com.example.logintest.web.dto.UserInfoDto;
+import com.example.logintest.Web.dto.UserInfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
