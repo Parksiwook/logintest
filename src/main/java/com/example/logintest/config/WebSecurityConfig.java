@@ -1,6 +1,6 @@
 package com.example.logintest.config;
 
-import com.example.logintest.serviec.UserService;
+import com.example.logintest.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
