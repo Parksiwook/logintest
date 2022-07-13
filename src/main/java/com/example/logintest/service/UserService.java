@@ -2,7 +2,7 @@ package com.example.logintest.service;
 
 import com.example.logintest.domain.user.UserInfo;
 import com.example.logintest.domain.user.UserRepository;
-import com.example.logintest.Web.dto.UserInfoDto;
+import com.example.logintest.Web.dto.UserinfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -23,7 +23,7 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException(email));
     }
 
-    public Long save(UserInfoDto infoDto) {
+    public Long save(UserinfoDto infoDto) {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         infoDto.setPassword(encoder.encode(infoDto.getPassword()));
 

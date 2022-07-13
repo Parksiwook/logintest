@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final UserService userService; // 유저 정보를 가져올 클래스
 
     @Override
-    // 인증을 무시할 경로 설정, h2-console 추가 (근데 h2-console에 갑자기 로그인 요구, 수정 필요할듯)
+    // 인증을 무시할 경로 설정
     public void configure(WebSecurity web) {
         web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "h2-console/**");
     }
@@ -30,19 +30,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable().headers().frameOptions().disable()// h2-console 화면 사용하기 위함
                 .and()
-                .authorizeRequests()
-                .antMatchers("/login", "/signup", "/user").permitAll() // 누구나 접근 가능
-                .antMatchers("/").hasRole("USER") // USER, ADMIN 만 접근 가능
-                .antMatchers("/admin").hasRole("ADMIN") // ADMIN 만 접근 가능
-                .anyRequest().authenticated() // 나머지는 권한이 있기만 하면 접근 가능
+                    .authorizeRequests()
+                        .antMatchers("/login", "/signup", "/user").permitAll() // 누구나 접근 가능
+                        .antMatchers("/").hasRole("USER") // USER, ADMIN 만 접근 가능
+                        .antMatchers("/admin").hasRole("ADMIN") // ADMIN 만 접근 가능
+                        .anyRequest().authenticated() // 나머지는 권한이 있기만 하면 접근 가능
                 .and()
-                .formLogin() // 로그인에 대한 설정
-                .loginPage("/login") // 로그인 페이지 링크
-                .defaultSuccessUrl("/") // 로그인 성공시 연결되는 주소
+                    .formLogin() // 로그인에 대한 설정
+                        .loginPage("/login") // 로그인 페이지 링크
+                        .defaultSuccessUrl("/") // 로그인 성공시 연결되는 주소
                 .and()
-                .logout() // 로그아웃 관련 설정
-                .logoutSuccessUrl("/login") // 로그아웃 성공시 연결되는 주소
-                .invalidateHttpSession(true) // 로그아웃시 저장해 둔 세션 날리기
+                    .logout() // 로그아웃 관련 설정
+                        .logoutSuccessUrl("/login") // 로그아웃 성공시 연결되는 주소
+                        .invalidateHttpSession(true) // 로그아웃시 저장해 둔 세션 날리기
         ;
     }
 
