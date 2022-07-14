@@ -16,7 +16,7 @@ public class UserService implements UserDetailsService {
     private final UserRepository userRepository;
 
 
-   //loadUserByUsername 로  DB 에서 유저정보를 불러옴
+   //loadUserByUsername  DB 에서 유저정보를 불러옴
     @Override
     public UserInfo loadUserByUsername(String email) throws UsernameNotFoundException {
         return userRepository.findByEmail(email)

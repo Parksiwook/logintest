@@ -13,7 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @RequiredArgsConstructor
 @EnableWebSecurity // Spring Security를 활성화하는 어노테이션
-@Configuration // Bean 관리하는 어노테이션인듯 함, Spring에 대한 공부 더 필요함
+@Configuration // Bean 관리하는 어노테이션
 // 해당 클래스가 Spring Security 설정 파일로 역할을 하기 위해선 WebSecurityConfigurerAdapter 클래스를 상속해야 함
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
