@@ -6,8 +6,6 @@ import java.util.List;
 import java.util.Optional;
 
 public interface UserRepository extends JpaRepository<UserInfo, Long> {
-    Optional<UserInfo> findByEmail(String email); // 이메일 통해 회원 조회하기 위함
-
-    List<UserInfo> findUserInfoByEmail(String Email);
+    Optional<UserInfo> findByEmail(String email); // 회원 조회
 
 }

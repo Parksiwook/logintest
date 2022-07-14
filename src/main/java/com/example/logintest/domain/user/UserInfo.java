@@ -23,7 +23,7 @@ public class UserInfo implements UserDetails {
     private Long code; // PK
 
     @Column(unique = true, nullable = false)
-    private String email; // id(email)
+    private String email; // id
 
     @Column(nullable = false)
     private String password; // 비밀번호
