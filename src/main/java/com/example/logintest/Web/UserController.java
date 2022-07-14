@@ -20,7 +20,7 @@ public class UserController {
 
     @PostMapping("/user") // signup api
     public String signup(UserinfoDto infoDto) {
-        userService.save(infoDto);
+        userService.save(infoDto); //save를 통해 DB에 저장된다.
         return "redirect:/login";
     }
 
