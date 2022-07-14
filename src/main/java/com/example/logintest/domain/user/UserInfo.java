@@ -23,10 +23,8 @@ public class UserInfo implements UserDetails {
 
     @Column(unique = true, nullable = false)
     private String email; // id(email)
-
     @Column(nullable = false)
     private String password; // 비밀번호
-
     @Column(nullable = false)
     private String auth; // role , 형태로 저장
 
@@ -50,6 +48,7 @@ public class UserInfo implements UserDetails {
         return roles;
     }
 
+    //unique 중복이 없는 유일한 값
     // 사용자의 unique한 값 return(보통 pk or id)
     @Override
     public String getUsername() {

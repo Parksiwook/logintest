@@ -1,7 +1,7 @@
 package com.example.logintest.Web;
 
-import com.example.logintest.Web.dto.UserinfoDto;
 import com.example.logintest.service.UserService;
+import com.example.logintest.Web.dto.UserinfoDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
@@ -14,15 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 
 @RequiredArgsConstructor
 @Controller
-
 public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/user") // signup api
+    @PostMapping("/user") //
     public String signup(UserinfoDto infoDto) {
-        userService.save(infoDto);
-        return "redirect:/login";
+        userService.save(infoDto); //save호출
+        return "redirect:/login"; // 로그인페이지 이동
     }
 
     @GetMapping("/logout") // logout by GET 요청
