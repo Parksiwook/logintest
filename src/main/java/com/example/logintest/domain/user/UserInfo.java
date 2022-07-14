@@ -51,6 +51,7 @@ public class UserInfo implements UserDetails {
         return roles;
     }
 
+    //unique 중복이 없는 유일한 값
     // 사용자의 unique한 값 return(보통 pk or id)
     @Override
     public String getUsername() {
