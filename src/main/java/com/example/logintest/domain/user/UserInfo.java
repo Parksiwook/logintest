@@ -24,10 +24,8 @@ public class UserInfo implements UserDetails {
 
     @Column(unique = true, nullable = false)
     private String email; // id(email)
-
     @Column(nullable = false)
     private String password; // 비밀번호
-
     @Column(nullable = false)
     private String auth; // role , 형태로 저장
 

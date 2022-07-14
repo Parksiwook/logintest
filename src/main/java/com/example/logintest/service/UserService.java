@@ -15,7 +15,7 @@ public class UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
 
-    // UserDetailService 상속시 필수로 구현해야 하는 메소드
+
     // UserDetails가 기본 반환 타입, UserInfo가 이를 상속하고 있으므로 자동으로 다운캐스팅됨
     @Override
     public UserInfo loadUserByUsername(String email) throws UsernameNotFoundException {
