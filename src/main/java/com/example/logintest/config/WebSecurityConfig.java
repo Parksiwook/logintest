@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -18,18 +17,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final UserService userService; // 유저 정보를 가져올 클래스
 
-    @Override
-    // 인증을 무시할 경로 설정, h2-console 추가
-    public void configure(WebSecurity web) {
-        web.ignoring().antMatchers("/css/**", "/js/**", "/img/**", "h2-console/**");
-    }
+
 
     @Override
     // http 관련 인증 설정 가능
     public void configure(HttpSecurity http) throws Exception {
         http
-                .csrf().disable().headers().frameOptions().disable()// h2-console 화면 사용하기 위함
-                .and()
+
                 .authorizeRequests()
                 .antMatchers("/login", "/signup", "/user").permitAll() // 누구나 접근 가능
                 .antMatchers("/").hasRole("USER") // USER, ADMIN 만 접근 가능
