@@ -12,8 +12,10 @@ public class UserinfoDto {
     private String auth;
 }
 
+// 이메일과 비밀번호 권한정보를 dto에 담음
 
-// JPA
+
+
 
 
 

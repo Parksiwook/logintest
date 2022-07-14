@@ -18,10 +18,10 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("/user") // signup api
+    @PostMapping("/user") //
     public String signup(UserinfoDto infoDto) {
-        userService.save(infoDto); //save를 통해 DB에 저장된다.
-        return "redirect:/login";
+        userService.save(infoDto); //save호출
+        return "redirect:/login"; // 로그인페이지 이동
     }
 
     @GetMapping("/logout") // logout by GET 요청
